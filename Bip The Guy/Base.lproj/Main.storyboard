@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="gkg-JX-zzN">
-                                <rect key="frame" x="54" y="395" width="266" height="30"/>
+                                <rect key="frame" x="54" y="418" width="266" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j70-Xr-jUh">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
@@ -60,7 +60,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BuY-un-JM7" secondAttribute="trailing" constant="16" id="6j2-ln-XT3"/>
                             <constraint firstItem="gkg-JX-zzN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="IjS-qP-nUM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yi4-18-lnY" secondAttribute="trailing" constant="16" id="MVu-KA-YCP"/>
-                            <constraint firstItem="gkg-JX-zzN" firstAttribute="top" secondItem="Yi4-18-lnY" secondAttribute="bottom" constant="25" id="OT1-Vg-dmn"/>
+                            <constraint firstItem="gkg-JX-zzN" firstAttribute="top" secondItem="Yi4-18-lnY" secondAttribute="bottom" constant="48" id="OT1-Vg-dmn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gkg-JX-zzN" secondAttribute="trailing" constant="55" id="TAz-xG-vBf"/>
                             <constraint firstItem="Yi4-18-lnY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TGx-zZ-EVn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yi4-18-lnY" secondAttribute="trailing" constant="16" id="U7A-hA-PnL"/>
