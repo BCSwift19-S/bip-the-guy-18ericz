@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
+
+
 
 class ViewController: UIViewController {
 
@@ -16,15 +19,31 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    var audioPlayer = AVAudioPlayer()
 
     func animateImage(){
         let bounds = self.imageToPunch.bounds
         let shrinkValue: CGFloat = 60
-        self.imageToPunch.bounds = CGRect(x: self.imageToPunch.bounds.origin.x+shrinkValue, y: self.imageToPunch.bounds.origin.y+shrinkvalue, width: self.imageToPunch.bounds.size.width-shrinkvalue, height: self.imageToPunch.bounds.size.height-shrinkvalue)
+        self.imageToPunch.bounds = CGRect(x: self.imageToPunch.bounds.origin.x+shrinkValue, y: self.imageToPunch.bounds.origin.y+shrinkValue, width: self.imageToPunch.bounds.size.width-shrinkValue, height: self.imageToPunch.bounds.size.height-shrinkValue)
         
         UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: [], animations: {self.imageToPunch.bounds = bounds}, completion: nil )
     }
     
+    func playSound(soundName: String, audioPlayer: inout AVAudioPlayer){
+        if let sound = NSDataAsset(name: soundName){
+            //check if sound.data is actual
+            do{
+                try audioPlayer = AVAudioPlayer(data: sound.data)
+                audioPlayer.play()
+            }catch{
+                print("Error: data in \(soundName) could not be played as a sound")
+            }
+            
+        }else{
+            //if reading didnt work
+            print("Error: Sound \(soundName) did not load")
+        }
+    }
     
     @IBAction func libraryPressed(_ sender: UIButton) {
     }
@@ -35,6 +54,7 @@ class ViewController: UIViewController {
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         animateImage()
+        playSound(soundName: "punchSound", audioPlayer: &audioPlayer)
     }
     
 }
